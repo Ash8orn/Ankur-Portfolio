@@ -37,8 +37,8 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-base-950/95 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.9)] backdrop-blur-lg">
-      <nav className="container-x flex h-16 items-center justify-between">
-        <a href="#top" className="group flex items-center gap-2.5" aria-label="Home">
+      <nav className="container-x flex h-16 items-center gap-6">
+        <a href="#top" className="group flex shrink-0 items-center gap-2.5" aria-label="Home">
           <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent-gradient font-mono text-sm font-bold text-base-950">
             AB
           </span>
@@ -47,12 +47,12 @@ export default function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="mx-auto hidden items-center gap-0.5 lg:flex">
           {NAV.map((item) => (
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                className={`rounded-md px-2.5 py-2 text-[13px] font-medium transition-colors ${
                   active === item.id
                     ? "text-accent"
                     : "text-slate-400 hover:text-slate-100"
@@ -64,7 +64,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <a
             href={resume.resumeFile}
             download

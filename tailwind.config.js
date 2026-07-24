@@ -44,12 +44,17 @@ export default {
           "0%,100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
+        scan: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(560%)" },
+        },
       },
       animation: {
         blink: "blink 1.1s step-end infinite",
         float: "float 7s ease-in-out infinite",
         "fade-in": "fade-in 0.6s ease-out both",
         "gradient-pan": "gradient-pan 6s ease infinite",
+        scan: "scan 3.5s ease-in-out infinite",
       },
       boxShadow: {
         glow: "0 0 45px -12px rgba(16,185,129,0.45)",

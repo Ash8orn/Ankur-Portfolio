@@ -2,6 +2,7 @@ import { motion, type Variants } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { resume } from "../data/resume";
 import TerminalCard from "./TerminalCard";
+import ProfileCard from "./ProfileCard";
 import SocialLinks from "./SocialLinks";
 
 const container: Variants = {
@@ -18,7 +19,7 @@ export default function Hero() {
     <section id="top" className="relative overflow-hidden pt-24 sm:pt-28">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-grid opacity-40 mask-fade-b" />
 
-      <div className="container-x grid items-center gap-12 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-24">
+      <div className="container-x grid items-center gap-12 pb-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-12">
         <motion.div variants={container} initial="hidden" animate="show">
           {resume.available && (
             <motion.div variants={item} className="chip chip-accent mb-6">
@@ -50,7 +51,7 @@ export default function Hero() {
               Get in touch
               <ArrowUpRight className="h-4 w-4" />
             </a>
-            <SocialLinks />
+            <SocialLinks includeEmail={false} />
           </motion.div>
 
           <motion.dl
@@ -70,7 +71,16 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.96, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:animate-float"
+        >
+          <ProfileCard />
+        </motion.div>
+      </div>
+
+      <div className="container-x pb-16 lg:pb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
           <TerminalCard />
         </motion.div>
