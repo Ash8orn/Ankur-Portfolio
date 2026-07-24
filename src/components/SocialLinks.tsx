@@ -6,26 +6,32 @@ import { resume } from "../data/resume";
 type IconType = ComponentType<{ className?: string }>;
 type Item = { label: string; href: string; Icon: IconType };
 
-const items: Item[] = [
-  resume.socials.github && {
-    label: "GitHub",
-    href: resume.socials.github,
-    Icon: GithubIcon,
-  },
-  resume.socials.linkedin && {
-    label: "LinkedIn",
-    href: resume.socials.linkedin,
-    Icon: LinkedinIcon,
-  },
-  resume.socials.twitter && {
-    label: "X / Twitter",
-    href: resume.socials.twitter,
-    Icon: XIcon,
-  },
-  { label: "Email", href: `mailto:${resume.email}`, Icon: Mail },
-].filter(Boolean) as Item[];
+export default function SocialLinks({
+  className = "",
+  includeEmail = true,
+}: {
+  className?: string;
+  includeEmail?: boolean;
+}) {
+  const items: Item[] = [
+    resume.socials.github && {
+      label: "GitHub",
+      href: resume.socials.github,
+      Icon: GithubIcon,
+    },
+    resume.socials.linkedin && {
+      label: "LinkedIn",
+      href: resume.socials.linkedin,
+      Icon: LinkedinIcon,
+    },
+    resume.socials.twitter && {
+      label: "X / Twitter",
+      href: resume.socials.twitter,
+      Icon: XIcon,
+    },
+    includeEmail && { label: "Email", href: `mailto:${resume.email}`, Icon: Mail },
+  ].filter(Boolean) as Item[];
 
-export default function SocialLinks({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       {items.map(({ label, href, Icon }) => (

@@ -31,7 +31,7 @@ export default function Contact() {
           </div>
 
           <div className="mt-8 flex justify-center">
-            <SocialLinks />
+            <SocialLinks includeEmail={false} />
           </div>
 
           <p className="mt-8 font-mono text-xs text-slate-500">
