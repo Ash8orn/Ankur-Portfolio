@@ -1,0 +1,9 @@
+# Security contact information for this site (RFC 9116)
+# https://www.rfc-editor.org/rfc/rfc9116
+
+Contact: mailto:bakreankur@gmail.com
+Expires: 2027-07-24T00:00:00.000Z
+Preferred-Languages: en
+
+# After the custom domain is live, set the canonical URL, e.g.:
+# Canonical: https://your-domain.com/.well-known/security.txt

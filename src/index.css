@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    @apply bg-base-950 font-sans text-slate-300 antialiased;
+  }
+
+  /* Fixed backdrop as its own layer: reliable on iOS Safari, unlike background-attachment: fixed */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    pointer-events: none;
+    background-image:
+      radial-gradient(60rem 60rem at 12% -10%, rgba(16, 185, 129, 0.1), transparent 55%),
+      radial-gradient(55rem 55rem at 100% 0%, rgba(34, 211, 238, 0.08), transparent 50%),
+      radial-gradient(50rem 50rem at 50% 120%, rgba(16, 185, 129, 0.06), transparent 55%);
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-base-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-base-700;
+    border: 2px solid #05070a;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent/50;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-slate-100;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .card {
+    @apply rounded-2xl border border-white/[0.06] bg-base-850/60 shadow-card backdrop-blur-sm
+      transition-colors duration-300;
+  }
+
+  .card-hover {
+    @apply hover:border-accent/30 hover:bg-base-800/70;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-base-800/70
+      px-3 py-1 text-xs font-medium text-slate-300 transition-colors;
+  }
+
+  .chip-accent {
+    @apply border-accent/25 bg-accent/10 text-accent-soft;
+  }
+
+  .gradient-text {
+    @apply bg-accent-gradient bg-clip-text text-transparent;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-accent;
+  }
+
+  .link-muted {
+    @apply text-slate-400 transition-colors hover:text-accent;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold
+      transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/60;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent-gradient text-base-950 shadow-glow hover:-translate-y-0.5 hover:shadow-glow-cyan;
+  }
+
+  .btn-ghost {
+    @apply btn border border-white/10 bg-white/[0.02] text-slate-200 hover:border-accent/40 hover:text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-grid {
+    background-size: 44px 44px;
+    @apply bg-grid-faint;
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+}
