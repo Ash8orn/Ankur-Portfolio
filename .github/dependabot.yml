@@ -8,6 +8,11 @@ updates:
     groups:
       dev-dependencies:
         dependency-type: "development"
+    ignore:
+      # Tailwind v4 is a breaking migration (PostCSS plugin moved to
+      # @tailwindcss/postcss). Stay on v3 until migrated manually.
+      - dependency-name: "tailwindcss"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
