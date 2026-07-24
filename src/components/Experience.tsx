@@ -24,7 +24,7 @@ export default function Experience() {
                 {exp.period.includes("Present") && (
                   <span
                     aria-hidden
-                    className="absolute -inset-2 animate-ping rounded-full bg-accent/70"
+                    className="absolute -inset-1 animate-ping rounded-full border border-accent/70"
                   />
                 )}
                 <span

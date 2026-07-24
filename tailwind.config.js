@@ -51,23 +51,23 @@ export default {
         heartbeat: {
           "0%, 100%": {
             transform: "scale(1)",
-            boxShadow: "0 0 6px 1px rgba(16,185,129,0.5)",
+            boxShadow: "0 0 4px 0 rgba(16,185,129,0.45)",
           },
           "20%": {
-            transform: "scale(1.5)",
-            boxShadow: "0 0 22px 8px rgba(16,185,129,0.95)",
+            transform: "scale(1.22)",
+            boxShadow: "0 0 12px 3px rgba(16,185,129,0.8)",
           },
           "40%": {
             transform: "scale(1)",
-            boxShadow: "0 0 6px 1px rgba(16,185,129,0.5)",
+            boxShadow: "0 0 4px 0 rgba(16,185,129,0.45)",
           },
           "55%": {
-            transform: "scale(1.3)",
-            boxShadow: "0 0 16px 5px rgba(16,185,129,0.85)",
+            transform: "scale(1.12)",
+            boxShadow: "0 0 8px 2px rgba(16,185,129,0.6)",
           },
           "70%": {
             transform: "scale(1)",
-            boxShadow: "0 0 6px 1px rgba(16,185,129,0.5)",
+            boxShadow: "0 0 4px 0 rgba(16,185,129,0.45)",
           },
         },
       },
