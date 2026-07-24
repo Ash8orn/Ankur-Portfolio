@@ -24,19 +24,11 @@ export default function Experience() {
                 {exp.period.includes("Present") && (
                   <span
                     aria-hidden
-                    className="absolute -inset-1 animate-ping rounded-full border border-accent/70"
+                    className="absolute inset-0 rounded-full animate-heartbeat"
                   />
                 )}
-                <span
-                  className={`relative grid h-4 w-4 place-items-center rounded-full bg-base-950 ring-2 ring-accent ${
-                    exp.period.includes("Present") ? "animate-heartbeat" : ""
-                  }`}
-                >
-                  <span
-                    className={`rounded-full bg-accent ${
-                      exp.period.includes("Present") ? "h-2 w-2" : "h-1.5 w-1.5"
-                    }`}
-                  />
+                <span className="relative grid h-4 w-4 place-items-center rounded-full bg-base-950 ring-2 ring-accent">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                 </span>
               </span>
               <div className="card card-hover p-6">

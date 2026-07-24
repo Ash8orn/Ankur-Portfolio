@@ -49,26 +49,10 @@ export default {
           "100%": { transform: "translateY(560%)" },
         },
         heartbeat: {
-          "0%, 100%": {
-            transform: "scale(1)",
-            boxShadow: "0 0 4px 0 rgba(16,185,129,0.45)",
-          },
-          "20%": {
-            transform: "scale(1.22)",
-            boxShadow: "0 0 12px 3px rgba(16,185,129,0.8)",
-          },
-          "40%": {
-            transform: "scale(1)",
-            boxShadow: "0 0 4px 0 rgba(16,185,129,0.45)",
-          },
-          "55%": {
-            transform: "scale(1.12)",
-            boxShadow: "0 0 8px 2px rgba(16,185,129,0.6)",
-          },
-          "70%": {
-            transform: "scale(1)",
-            boxShadow: "0 0 4px 0 rgba(16,185,129,0.45)",
-          },
+          "0%, 60%, 100%": { boxShadow: "0 0 4px 1px rgba(16,185,129,0.4)" },
+          "14%": { boxShadow: "0 0 16px 5px rgba(16,185,129,0.95)" },
+          "28%": { boxShadow: "0 0 5px 1px rgba(16,185,129,0.45)" },
+          "42%": { boxShadow: "0 0 11px 3px rgba(16,185,129,0.7)" },
         },
       },
       animation: {
