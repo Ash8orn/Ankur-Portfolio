@@ -17,11 +17,27 @@ export default function Experience() {
               {i !== resume.experience.length - 1 && (
                 <span
                   aria-hidden
-                  className="absolute left-2 top-2 h-full w-px -translate-x-1/2 bg-white/10"
+                  className="absolute left-2 top-3 h-[calc(100%+0.5rem)] w-px -translate-x-1/2 bg-white/10"
                 />
               )}
-              <span className="absolute left-2 top-2 grid h-4 w-4 -translate-x-1/2 place-items-center rounded-full bg-base-950 ring-2 ring-accent">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              <span className="absolute left-2 top-3 z-10 -translate-x-1/2">
+                {exp.period.includes("Present") && (
+                  <span
+                    aria-hidden
+                    className="absolute -inset-2 animate-ping rounded-full bg-accent/70"
+                  />
+                )}
+                <span
+                  className={`relative grid h-4 w-4 place-items-center rounded-full bg-base-950 ring-2 ring-accent ${
+                    exp.period.includes("Present") ? "animate-heartbeat" : ""
+                  }`}
+                >
+                  <span
+                    className={`rounded-full bg-accent ${
+                      exp.period.includes("Present") ? "h-2 w-2" : "h-1.5 w-1.5"
+                    }`}
+                  />
+                </span>
               </span>
               <div className="card card-hover p-6">
                 <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">

@@ -48,6 +48,28 @@ export default {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(560%)" },
         },
+        heartbeat: {
+          "0%, 100%": {
+            transform: "scale(1)",
+            boxShadow: "0 0 6px 1px rgba(16,185,129,0.5)",
+          },
+          "20%": {
+            transform: "scale(1.5)",
+            boxShadow: "0 0 22px 8px rgba(16,185,129,0.95)",
+          },
+          "40%": {
+            transform: "scale(1)",
+            boxShadow: "0 0 6px 1px rgba(16,185,129,0.5)",
+          },
+          "55%": {
+            transform: "scale(1.3)",
+            boxShadow: "0 0 16px 5px rgba(16,185,129,0.85)",
+          },
+          "70%": {
+            transform: "scale(1)",
+            boxShadow: "0 0 6px 1px rgba(16,185,129,0.5)",
+          },
+        },
       },
       animation: {
         blink: "blink 1.1s step-end infinite",
@@ -55,6 +77,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out both",
         "gradient-pan": "gradient-pan 6s ease infinite",
         scan: "scan 3.5s ease-in-out infinite",
+        heartbeat: "heartbeat 1.6s ease-in-out infinite",
       },
       boxShadow: {
         glow: "0 0 45px -12px rgba(16,185,129,0.45)",

@@ -36,11 +36,11 @@ export default function Projects() {
                 {project.name}
               </h3>
               <p className="mt-1 font-mono text-xs text-slate-500">{project.period}</p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
+              <p className="mt-3 text-sm leading-relaxed text-slate-400">
                 {project.description}
               </p>
 
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span key={tag} className="chip text-[11px]">
                     {tag}
