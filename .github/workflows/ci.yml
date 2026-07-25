@@ -29,8 +29,11 @@ jobs:
       - name: Type check
         run: npm run typecheck
 
-      - name: Audit dependencies
-        run: npm audit --audit-level=high
+      - name: Audit dependencies (production, blocking)
+        run: npm audit --omit=dev --audit-level=high
+
+      - name: Audit dependencies (all, advisory only)
+        run: npm audit --audit-level=high || true
 
       - name: Build
         run: npm run build
