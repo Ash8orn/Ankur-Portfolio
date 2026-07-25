@@ -33,16 +33,22 @@ export default function App() {
       raf = requestAnimationFrame(step);
     };
 
+    const mtCache = new Map<string, number>();
     const onClick = (e: MouseEvent) => {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)
         return;
       const a = (e.target as HTMLElement).closest('a[href^="#"]') as HTMLAnchorElement | null;
       const hash = a?.getAttribute("href");
       if (!hash || hash === "#") return;
-      const el = document.getElementById(hash.slice(1));
+      const id = hash.slice(1);
+      const el = document.getElementById(id);
       if (!el) return;
       e.preventDefault();
-      const scrollMt = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+      let scrollMt = mtCache.get(id);
+      if (scrollMt === undefined) {
+        scrollMt = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+        mtCache.set(id, scrollMt);
+      }
       const targetY = window.scrollY + el.getBoundingClientRect().top - scrollMt;
       animateScrollTo(Math.max(0, targetY));
       history.pushState(null, "", hash);

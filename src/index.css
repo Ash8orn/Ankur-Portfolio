@@ -62,7 +62,7 @@
   }
 
   .card {
-    @apply rounded-2xl border border-white/[0.06] bg-base-850/60 shadow-card backdrop-blur-sm
+    @apply rounded-2xl border border-white/[0.06] bg-base-850/80 shadow-card
       transition-colors duration-300;
   }
 
