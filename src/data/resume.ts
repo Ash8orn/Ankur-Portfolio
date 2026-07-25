@@ -339,7 +339,7 @@ export const resume: ResumeData = {
     {
       title: "Professionalism & Excellence Award",
       org: "One Cloud Program",
-      note: "Recognized as Performance Testing Orchestrator.",
+      note: "Recognized as a Performance Testing Orchestrator.",
     },
   ] satisfies Award[],
 
