@@ -95,7 +95,7 @@ export const resume: ResumeData = {
     { value: "4.5+", label: "Years in offensive security" },
     { value: "50+", label: "Apps & APIs assessed" },
     { value: "30+", label: "Critical / High vulns found" },
-    { value: "7", label: "CVEs discovered" },
+    { value: "6", label: "CVEs discovered" },
     { value: "2x", label: "MSRC Blue Hat CTF winner" },
     { value: "10+", label: "Hall of Fame credits" },
   ] satisfies Stat[],
@@ -210,11 +210,6 @@ export const resume: ResumeData = {
   ] satisfies Project[],
 
   cves: [
-    {
-      id: "CVE-2023-27137",
-      title: "Privilege Escalation",
-      product: "PHPGurukul Hostel Management System",
-    },
     {
       id: "CVE-2022-1062",
       title: "Stored XSS",

@@ -12,7 +12,7 @@ const highlights = [
   {
     Icon: Bug,
     title: "Vulnerability Research",
-    body: "7 CVEs plus multiple Hall of Fame acknowledgements.",
+    body: "6 CVEs plus multiple Hall of Fame acknowledgements.",
   },
   {
     Icon: Radar,

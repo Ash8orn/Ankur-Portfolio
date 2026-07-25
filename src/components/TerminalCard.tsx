@@ -14,7 +14,7 @@ const script: TLine[] = [
     className: "text-slate-400",
   },
   { prompt: "$", text: "./recon --achievements", className: "text-slate-100" },
-  { text: "[+] 7 CVEs Disclosed to Vendors", className: "text-cyan-300" },
+  { text: "[+] 6 CVEs Disclosed to Vendors", className: "text-cyan-300" },
   { text: "[+] 2x Microsoft MSRC Blue Hat CTF Winner", className: "text-cyan-300" },
   {
     text: "[+] MSRC: Special Mention · Researcher Recognition Program",
