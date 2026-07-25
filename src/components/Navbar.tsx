@@ -37,12 +37,12 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-base-950/95 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.9)] backdrop-blur-lg">
-      <nav className="container-x flex h-16 items-center gap-6">
+      <nav className="container-x flex h-20 items-center gap-6">
         <a href="#top" className="group flex shrink-0 items-center gap-2.5" aria-label="Home">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent-gradient font-mono text-sm font-bold text-base-950">
+          <span className="grid h-10 w-10 place-items-center rounded-lg bg-accent-gradient font-mono text-base font-bold text-base-950">
             AB
           </span>
-          <span className="hidden text-sm font-semibold text-slate-200 sm:block">
+          <span className="hidden text-base font-semibold text-slate-200 sm:block">
             {resume.name}
           </span>
         </a>
@@ -52,7 +52,7 @@ export default function Navbar() {
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className={`rounded-md px-2.5 py-2 text-[13px] font-medium transition-colors ${
+                className={`rounded-md px-2.5 py-2.5 text-[13px] font-medium transition-colors ${
                   active === item.id
                     ? "text-accent"
                     : "text-slate-400 hover:text-slate-100"
@@ -68,14 +68,14 @@ export default function Navbar() {
           <a
             href={resume.resumeFile}
             download
-            className="btn-ghost hidden px-4 py-2 text-xs sm:inline-flex"
+            className="btn-ghost hidden px-4 py-2.5 text-[13px] sm:inline-flex"
           >
             <FileDown className="h-4 w-4" />
             Download Resume
           </a>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-lg border border-white/10 text-slate-300 lg:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
           >

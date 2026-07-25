@@ -19,7 +19,7 @@ export default function Section({
   className,
 }: SectionProps) {
   return (
-    <section id={id} className={`scroll-mt-20 py-12 sm:py-16 ${className ?? ""}`}>
+    <section id={id} className={`scroll-mt-24 py-12 sm:py-16 ${className ?? ""}`}>
       <div className="container-x">
         {(eyebrow || title || subtitle) && (
           <motion.div
