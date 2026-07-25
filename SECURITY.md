@@ -1,5 +1,7 @@
 # Security Policy
 
+Live site: <https://offsecankur.com>
+
 ## Scope
 
 This repository is a **static, single-page portfolio website** (Vite + React,

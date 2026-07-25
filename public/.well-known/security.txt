@@ -4,6 +4,4 @@
 Contact: mailto:bakreankur@gmail.com
 Expires: 2027-07-24T00:00:00.000Z
 Preferred-Languages: en
-
-# After the custom domain is live, set the canonical URL, e.g.:
-# Canonical: https://your-domain.com/.well-known/security.txt
+Canonical: https://offsecankur.com/.well-known/security.txt
