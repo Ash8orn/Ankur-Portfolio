@@ -1,6 +1,6 @@
 export default function ProfileCard() {
   return (
-    <div className="relative mx-auto w-full max-w-sm">
+    <div className="relative mx-auto w-full max-w-md lg:mr-0">
       <span className="pointer-events-none absolute -left-3.5 -top-3.5 h-8 w-8 rounded-tl-md border-l-2 border-t-2 border-accent" />
       <span className="pointer-events-none absolute -right-3.5 -top-3.5 h-8 w-8 rounded-tr-md border-r-2 border-t-2 border-accent" />
       <span className="pointer-events-none absolute -bottom-3.5 -left-3.5 h-8 w-8 rounded-bl-md border-b-2 border-l-2 border-accent" />
